@@ -1,0 +1,5 @@
+// lib/auth.cli.ts
+import "dotenv/config";
+import { auth } from "./auth";
+
+export default auth;
