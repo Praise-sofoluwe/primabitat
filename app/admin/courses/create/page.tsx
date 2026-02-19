@@ -1,4 +1,5 @@
-import { z } from "zod";
+"use client";
+
 import { buttonVariants } from "@/components/ui/button";
 import {
   Card,
@@ -26,7 +27,7 @@ import { Input } from "@/components/ui/input";
 
 export default function CourseCreationPage() {
   // Form setup
-  const form = useForm<z.input<typeof courseSchema>>({
+  const form = useForm({
     resolver: zodResolver(courseSchema),
     defaultValues: {
       title: "",
